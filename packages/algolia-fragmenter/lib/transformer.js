@@ -106,12 +106,6 @@ module.exports.transformToAlgoliaObject = (posts, ignoreSlugs) => {
             });
         }
 
-        if (post.authors && post.authors.length) {
-            post.authors.forEach((author) => {
-                algoliaPost.authors.push({name: author.name, slug: author.slug});
-            });
-        }
-
         algoliaObjects.push(algoliaPost);
 
         return algoliaPost;
