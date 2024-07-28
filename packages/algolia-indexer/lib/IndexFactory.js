@@ -10,9 +10,9 @@ const REQUIRED_SETTINGS = {
     // This ensures that chunks higher up on a page rank higher
     customRanking: [`desc(customRanking.heading)`, `asc(customRanking.position)`],
     // Defines the order algolia ranks various attributes in
-    searchableAttributes: [`title`, `headings`, `html`, `url`, `tags.name`, `tags`, `authors.name`, `authors`],
+    searchableAttributes: [`title`, `headings`, `html`, `url`, `tags.name`, `tags`, `custom_excerpt`, `published_at`],
     // Add slug to attributes we can filter by in order to find fragments to remove/delete
-    attributesForFaceting: [`filterOnly(slug)`]
+    attributesForFaceting: [`filterOnly(tags.name)`]
 };
 
 /**
