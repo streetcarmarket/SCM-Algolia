@@ -8,9 +8,9 @@ const REQUIRED_SETTINGS = {
     distinct: true,
     attributeForDistinct: `slug`,
     // This ensures that chunks higher up on a page rank higher
-    customRanking: [`desc(customRanking.heading)`, `asc(customRanking.position)`],
+    // customRanking: [`desc(customRanking.heading)`, `asc(customRanking.position)`],
     // Defines the order algolia ranks various attributes in
-    searchableAttributes: [`title`, `headings`, `html`, `url`, `tags.name`, `tags`, `custom_excerpt`, `published_at`],
+    searchableAttributes: [`title`, `excerpt`],
     // Add slug to attributes we can filter by in order to find fragments to remove/delete
     attributesForFaceting: [`filterOnly(tags.name)`]
 };
