@@ -48,9 +48,10 @@ module.exports.fragmentTransformer = (recordAccumulator, node) => {
         // The HTML string is already very long, and there are size limits
         delete fragment.content;
         // If we have an anchor, change the URL to be a deep link
-        if (fragment.anchor) {
-            fragment.url = `${node.url}#${fragment.anchor}`;
-        }
+        
+        // if (fragment.anchor) {
+        //     fragment.url = `${node.url}#${fragment.anchor}`;
+        // }
 
         let objectID = `${node.objectID}_${index}`;
 
